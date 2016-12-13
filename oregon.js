@@ -5,10 +5,10 @@ function makeTraveler(name) {
         isHealthy: true,
     };
 }
-let henrietta = makeTraveler('henrietta');
-let juan = makeTraveler('juan')
-console.log(henrietta);
-console.log(juan);
+let traveler = makeTraveler('henrietta');
+let traveler2 = makeTraveler('juan')
+console.log(traveler);
+console.log(traveler2);
 
 
 function makeWagon(capacity) {
@@ -34,8 +34,8 @@ function hunt(traveler) {
     };
 }
 
-hunt(juan);
-console.log(juan);
+hunt(traveler2);
+console.log(traveler2);
 
 
 
@@ -50,13 +50,45 @@ console.log(juan);
           };
           
       } 
-      eat(henrietta);
-      console.log(henrietta)
-      eat(juan);
-      console.log(juan);
-       
+      eat(traveler);
+      console.log(traveler)
+      eat(traveler2);
+      console.log(traveler2);
 
+      
+      function join(wagon, traveler) {
+        // Add the traveler to the wagon if there is space. 
+         // If there is not enough capacity, don't add them.
+         
+            let total = 0;
 
+            for (i = 0; i < wagon.passengers.length; i++ ) { 
+             
+             if (wagon.passengers.length <= 4) 
+                wagon.passengers.push(traveler2)
+                wagon.passengers.push
+         }
+    }
+
+       let success = join(3, traveler2);
+       console.log(success);
+
+      function quarantine(wagon) {
+        // Return true if there is at least one unhealthy person in the wagon. 
+        // Return false if not.
+        // wagon is an array
+
+          if ((traveler.isHealthy = false) || (traveler2.isHealthy = false)) {
+
+          }
+
+      }
+        function food(wagon) {
+            let total = 0;
+            total = (total + wagon.traveler.amount + wagon.traveler2.amount);
+        }
+        console.log(total);
+            //Return the total amount of food among all occupants of the wagon.
 
 
 
