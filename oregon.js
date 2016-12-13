@@ -28,8 +28,6 @@ function hunt(traveler) {
     //and 50% to increase it by 0 (unsuccessful hunt).
     //1. successful hunt = hunt >.5
     //2. successful hunt increase points by 100
-    //3. unsuccessful hunt = hunt < .5
-    //4. unsuccessful hunt increase amount by 0
 
     if (Math.random() >= .5) {
         traveler.amount = traveler.amount + 100;
@@ -40,18 +38,23 @@ hunt(juan);
 console.log(juan);
 
 
-    // return (Math.random() < .5) {
 
-    // };
-
-
-// function eat(traveler) {
-//     //Consumes 20 of the traveler's food. 
-//     //If the traveler doesn't have 20 food, the traveler is no longer healthy.
-//     return {
-
-//     };
-// }
+    function eat(traveler) {
+       //Consumes 20 of the traveler's food. 
+       //If the traveler doesn't have 20 food, the traveler is no longer healthy.
+            
+            
+            traveler.amount = (traveler.amount - 20);
+            if (traveler.amount < 20); {
+              traveler.isHealthy = false;
+          };
+          
+      } 
+      eat(henrietta);
+      console.log(henrietta)
+      eat(juan);
+      console.log(juan);
+       
 
 
 
