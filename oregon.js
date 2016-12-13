@@ -5,58 +5,62 @@ function makeTraveler(name) {
         isHealthy: true,
     };
 }
-    let henrietta = makeTraveler('henrietta');
-    let juan = makeTraveler('juan')
-    console.log(henrietta);
-    console.log(juan);
+let henrietta = makeTraveler('henrietta');
+let juan = makeTraveler('juan')
+console.log(henrietta);
+console.log(juan);
 
 
 function makeWagon(capacity) {
-    
+
     return {
         passengers: [],
         capacity: capacity,
     };
 
-//     let total = 0;
-
-//     for (let i = 0; i < capacity.wagon.length; i++) {
-//         let capacity = capacity.wagon[i];
-//         total = total + wagon.capacity;
-//     }
-//     return total;
 }
 let ride = makeWagon(5);
 console.log(ride);
-    
-
-
 
 
 function hunt(traveler) {
     //50% chance to increase the traveler's food by 100 (successful hunt), 
     //and 50% to increase it by 0 (unsuccessful hunt).
-    return {
+    //1. successful hunt = hunt >.5
+    //2. successful hunt increase points by 100
+    //3. unsuccessful hunt = hunt < .5
+    //4. unsuccessful hunt increase amount by 0
 
+    if (Math.random() >= .5) {
+        traveler.amount = traveler.amount + 100;
     };
 }
 
-function eat(traveler) {
-    //Consumes 20 of the traveler's food. 
-    //If the traveler doesn't have 20 food, the traveler is no longer healthy.
-    return {
+hunt(juan);
+console.log(juan);
 
-    };
-}
+
+    // return (Math.random() < .5) {
+
+    // };
+
+
+// function eat(traveler) {
+//     //Consumes 20 of the traveler's food. 
+//     //If the traveler doesn't have 20 food, the traveler is no longer healthy.
+//     return {
+
+//     };
+// }
 
 
 
 
 
 //Code Should Work:
-//let wagon = makeWagon(5);
-//let traveler = makeTraveler('Henrietta');
-//let traveler2 = makeTraveler('Juan');
+// let wagon = makeWagon(5);
+// let traveler = makeTraveler('Henrietta');
+// let traveler2 = makeTraveler('Juan');
 
 //hunt(traveler); // maybe get more food
 //eat(traveler2);
