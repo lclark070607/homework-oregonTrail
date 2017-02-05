@@ -52,20 +52,15 @@ console.log(traveler2)
 
 // console.log(ride.passengers.length)
 function join(wagon, peep) {
-    // Add the traveler to the wagon if there is space. 
-    // If there is not enough capacity, don't add them.
-    
-    for (i = 0; i < wagon.passengers.length; i++) {
 
-        if (wagon.passengers.length <= 4) {
-           wagon.passengers.push(peep)
-        }
-    }
-    return wagon.passengers.push(peep);
+       if (wagon.passengers.length < wagon.capacity) {
+          wagon.passengers.push(peep)
+       }
+
 };
 
-join(ride, 'henrietta');
-join(ride, 'juan');
+join(ride, 'traveler');
+join(ride, 'traveler2');
 console.log(ride)
 
 
